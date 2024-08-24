@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password genrator</title>
+    <link rel="stylesheet" href="passwordgenerate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" min="1" max="128" value="12">
+        
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="uppercase"> Uppercase Letters</label> <br>
+            <label><input type="checkbox" id="lowercase" checked> Lowercase Letters</label> <br>
+            <label><input type="checkbox" id="numbers"> Numbers</label> <br>
+            <label><input type="checkbox" id="special"> Special Characters</label> <br>
+        </div>
+        
+        <button id="generate">Generate Password</button>
+        
+        <div class="output">
+            <textarea id="password" readonly></textarea>
+            <button id="copy">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script>
+    // script.js
+
+document.getElementById('generate').addEventListener('click', function() {
+    const length = parseInt(document.getElementById('length').value);
+    const includeUppercase = document.getElementById('uppercase').checked;
+    const includeLowercase = document.getElementById('lowercase').checked;
+    const includeNumbers = document.getElementById('numbers').checked;
+    const includeSpecial = document.getElementById('special').checked;
+    
+    if (length < 8 || length > 128) {
+        alert('Password length must be between 8 and 128 characters.');
+        return;
+    }
+    
+    const upperChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowerChars = 'abcdefghijklmnopqrstuvwxyz';
+    const numberChars = '0123456789';
+    const specialChars = '!@#$%^&*()_+[]{}|;:,.<>?';
+    
+    let charPool = '';
+    if (includeUppercase) charPool += upperChars;
+    if (includeLowercase) charPool += lowerChars;
+    if (includeNumbers) charPool += numberChars;
+    if (includeSpecial) charPool += specialChars;
+    
+    if (charPool === '') {
+        alert('At least one character type must be selected.');
+        return;
+    }
+    
+    let password = '';
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * charPool.length);
+        password += charPool[randomIndex];
+    }
+    
+    document.getElementById('password').value = password;
+});
+
+document.getElementById('copy').addEventListener('click', function() {
+    const passwordField = document.getElementById('password');
+    passwordField.select();
+    document.execCommand('copy');
+    alert('Password copied to clipboard!');
+});
+</script>
+</body>
+</html>

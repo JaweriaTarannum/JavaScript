@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date & Time</title>
+    <link rel="stylesheet" href="assigment3.css">
+</head>
+<body>
+    <!-- CHAPTER NO 35 TO 38 -->
+    <!-- ANSWER NO 1 -->
+    <div class="container">
+        <h1>Current Date & Time</h1>
+        <p id="datetime">Loading...</p>
+        <button id="refresh">Refresh</button>
+    </div>
+    <!-- ANSWER NO 2 -->
+    <div class="container2">
+        <h1>Greeting Generator</h1>
+        <form id="greeting-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+            
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+            
+            <button type="submit">Greet Me!</button>
+        </form>
+        <p id="greeting"></p>
+    </div>
+
+    <!-- ANSWER NO 3 -->
+    <div class="container3">
+        <h1>Add Two Numbers</h1>
+        <form id="sum-form">
+            <label for="number1">Number 1:</label>
+            <input type="number" id="number1" required>
+            
+            <label for="number2">Number 2:</label>
+            <input type="number" id="number2" required>
+            
+            <button type="submit">Add Numbers</button>
+        </form>
+        <p id="result1">Result will be displayed here</p>
+    </div>
+
+    <!-- ANSWER NO 4 -->
+    <div class="container4">
+        <h1>Calculator</h1>
+        <form id="calculator-form">
+            <label for="num1">Number 1:</label>
+            <input type="number" id="num1" step="any" required>
+            
+            <label for="operator">Operator:</label>
+            <select id="operator" required>
+                <option value="">Select an operator</option>
+                <option value="+">Addition (+)</option>
+                <option value="-">Subtraction (-)</option>
+                <option value="*">Multiplication (*)</option>
+                <option value="/">Division (/)</option>
+            </select>
+            
+            <label for="num2">Number 2:</label>
+            <input type="number" id="num2" step="any" required>
+            
+            <button type="submit">Calculate</button>
+        </form>
+        <p id="result2">Result will be displayed here</p>
+    </div>
+
+    <!-- ANSWER NO 5 -->
+    <div class="container">
+        <h1>Square Calculator</h1>
+        <form id="square-form">
+            <label for="number">Number:</label>
+            <input type="number" id="number" step="any" required>
+            <button type="submit">Calculate Square</button>
+        </form>
+        <p id="result3">Result will be displayed here</p>
+    </div>
+
+    <!-- ANSWER NO 6 -->
+    <div class="container6">
+        <h1>Factorial Calculator</h1>
+        <form id="factorial-form">
+            <label for="number">Number:</label>
+            <input type="number" id="number" step="1" min="0" required>
+            <button type="submit">Calculate Factorial</button>
+        </form>
+        <p id="result4">Result will be displayed here</p>
+    </div>
+
+    <!-- ANSWER NO 7 -->
+    <div class="container7">
+        <h1>Counting Sequence</h1>
+        <form id="count-form">
+            <label for="start">Start Number:</label>
+            <input type="number" id="start" required>
+            
+            <label for="end">End Number:</label>
+            <input type="number" id="end" required>
+            
+            <button type="submit">Generate Counting</button>
+        </form>
+        <p id="result5">Counting sequence will be displayed here</p>
+    </div>
+
+    <!-- ANSWER NO 8 -->
+    <div class="container8">
+        <h1>Hypotenuse Calculator</h1>
+        <form id="hypotenuse-form">
+            <label for="base">Base:</label>
+            <input type="number" id="base" step="any" required>
+            
+            <label for="perpendicular">Perpendicular:</label>
+            <input type="number" id="perpendicular" step="any" required>
+            
+            <button type="submit">Calculate Hypotenuse</button>
+        </form>
+        <p id="result6">Hypotenuse will be displayed here</p>
+    </div>
+    
+    <!-- ANSWER NO 9 -->
+    <div class="container9">
+        <h1>Rectangle Area Calculator</h1>
+        <form id="rectangleForm">
+            <label for="width">Width:</label>
+            <input type="number" id="width" name="width" required>
+            
+            <label for="height">Height:</label>
+            <input type="number" id="height" name="height" required>
+            
+            <button type="button" onclick="calculateArea()">Calculate Area</button>
+        </form>
+        <div id="result7"></div>
+    </div>
+    
+    <!-- ANSWER NO 10 -->
+    <div class="container10">
+        <h1>Palindrome Checker</h1>
+        <form id="palindromeForm">
+            <label for="inputString">Enter a string:</label>
+            <input type="text" id="inputString" name="inputString" required>
+            <button type="button" onclick="checkPalindrome()">Check</button>
+        </form>
+        <div id="result8"></div>
+    </div>
+
+<!-- ANSWER NO 11 -->
+<div class="container11">
+<h1>Capitalize Each Word</h1>
+        <form id="capitalizeForm">
+            <label for="inputString">Enter a string:</label>
+            <input type="text" id="inputString" name="inputString1" required>
+            <button type="button" onclick="capitalizeWords()">Convert</button>
+        </form>
+        <div id="result9"></div>
+    </div>
+
+    <!-- ANSWER NO 12 -->
+    <div class="container12">
+        <h1>Find the Longest Word</h1>
+        <form id="longestWordForm">
+            <label for="inputString">Enter a string:</label>
+            <input type="text" id="inputString2" name="inputString" required>
+            <button type="button" onclick="findLongestWord()">Find Longest Word</button>
+        </form>
+        <div id="result10"></div>
+    </div>
+
+    <!-- ANSWER NO 13 -->
+    <div class="container13">
+        <h1>Count Letter Occurrences</h1>
+        <form id="countForm">
+            <label for="inputString">Enter a string:</label>
+            <input type="text" id="inputString3" name="inputString" required>
+            
+            <label for="inputLetter">Enter a letter:</label>
+            <input type="text" id="inputLetter" name="inputLetter" maxlength="1" required>
+            
+            <button type="button" onclick="countOccurrences()">Count Occurrences</button>
+        </form>
+        <div id="result11"></div>
+    </div>
+
+    <!-- ANSWER NO 14 -->
+     <div class="container14">
+    <h1>Circle Properties</h1>
+    <input id="radius" type="number" placeholder="Enter radius">
+    <button onclick="calculateProperties()">Calculate</button>
+    <div id="results">
+      <p id="circumference" class="result"></p>
+      <p id="area" class="result"></p>
+    </div>
+</div>
+    
+
+
+    <script src="assigment3.js"></script>
+</body>
+</html>

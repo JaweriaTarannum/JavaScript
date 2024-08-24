@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment 3 Chapter 31 To 34</title>
+    <link rel="stylesheet" href="assigments3.css">
+  
+</head>
+<body>
+    <!-- CHAPTER NO 31 TO 34 -->
+     <!-- ANSWER NO 1 -->
+     <div class="container">
+        <h1>Current Date and Time</h1>
+        <div id="datetime"></div>
+    </div>
+
+    <!-- ANSWER NO 2 -->
+    <div class="container">
+        <h1>Current Month Alert</h1>
+        <button onclick="showCurrentMonth()">Show Current Month</button>
+    </div>
+
+    <!-- ANSWER NO 3 -->
+    <div class="container">
+        <h1>Current Day Abbreviation</h1>
+        <button onclick="showDayAbbreviation()">Show Day Abbreviation</button>
+    </div>
+    <!-- ANSWER NO 4 -->
+    <div class="container">
+        <h1>Fun Day Checker</h1>
+        <div id="message"></div>
+    </div>
+    <!-- ANSWER NO 5 -->
+    <div class="container">
+        <h1>Date Message Checker</h1>
+        <div id="message2"></div>
+    </div>
+    <!-- ANSWER NO 6 -->
+    <div class="container">
+        <h1>Minutes Since Epoch</h1>
+        <div id="minutes-display"></div>
+    </div>
+    <!-- ANSWER NO 7 -->
+    <div class="container">
+        <h1>AM/PM Checker</h1>
+        <button onclick="checkTime()">Check Time</button>
+    </div>
+    <!-- ANSWER NO 8 -->
+    <div class="container">
+        <h1>Last Day of 2020</h1>
+        <p id="date-display"></p>
+    </div>
+    <!-- ANSWER NO 9 -->
+    <div class="container">
+        <h1>Ramadan Days Calculator</h1>
+        <button id="calculateDays">Calculate Days Since 1st Ramadan</button>
+    </div>
+    <!-- ANSWER NO 10 -->
+    <div class="container">
+        <h1>Elapsed Seconds Calculator</h1>
+        <label for="referenceDate">Enter Reference Date:</label>
+        <input type="date" id="referenceDate">
+        <button id="calculateSeconds">Calculate Elapsed Seconds</button>
+        <p id="result"></p>
+    </div>
+    <!-- ANSWER NO 11 -->
+    <div class="container">
+        <h1>Date and Time Manipulation</h1>
+        <button id="manipulateDate">Manipulate Date</button>
+        <p id="result2"></p>
+    </div>
+<!-- ANSWER NO 12 -->
+<div class="container">
+    <h1>Date 100 Years Back</h1>
+    <button id="showDate">Show Date 100 Years Back</button>
+</div>
+<!-- ANSWER NO 13 -->
+<div class="container">
+    <h1>Calculate Your Birth Year</h1>
+    <label for="age">Enter your age:</label>
+    <input type="number" id="age" placeholder="Enter your age">
+    <button id="calculateBirthYear">Calculate Birth Year</button>
+    <p id="result3"></p>
+</div>
+<!-- ANSWER NO 14 -->
+<div class="container">
+    <h1>K-Electric Bill Generator</h1>
+    <form id="billForm">
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" required>
+        
+        <label for="currentMonth">Current Month:</label>
+        <input type="text" id="currentMonth" required>
+        
+        <label for="numberOfUnits">Number of Units:</label>
+        <input type="number" id="numberOfUnits" step="any" required>
+        
+        <label for="chargesPerUnit">Charges per Unit:</label>
+        <input type="number" id="chargesPerUnit" step="any" required>
+        
+        <button type="button" id="generateBill">Generate Bill</button>
+    </form>
+
+    <div id="billDetails" class="hidden">
+        <h2>Bill Details</h2>
+        <p><strong>Customer Name:</strong> <span id="displayCustomerName"></span></p>
+        <p><strong>Current Month:</strong> <span id="displayCurrentMonth"></span></p>
+        <p><strong>Number of Units:</strong> <span id="displayNumberOfUnits"></span></p>
+        <p><strong>Charges per Unit:</strong> <span id="displayChargesPerUnit"></span></p>
+        <p><strong>Net Amount Payable (within Due Date):</strong> <span id="displayNetAmountPayable"></span></p>
+        <p><strong>Late Payment Surcharge:</strong> <span id="displayLatePaymentSurcharge"></span></p>
+        <p><strong>Gross Amount Payable (after Due Date):</strong> <span id="displayGrossAmountPayable"></span></p>
+    </div>
+</div>
+
+<script src="assigments3.js"></script>
+</body>
+</html>
